@@ -1,0 +1,43 @@
+# 01-hello-world
+
+## First program: "Hello, world"
+
+* defining functions
+* function parameters
+* function body (an expression)
+* strings
+* string concatenation
+* `main` program
+* evaluating (calling) functions
+* providing arguments
+* running a program with `runhaskell`
+* loading a program in `ghci`
+* evaluating a function in `ghci`
+
+## Haskell: Definition from Wikipedia
+
+Haskell is a general-purpose, statically-typed,
+purely functional programming language
+with type inference and lazy evaluation.
+Designed for teaching, research,
+and industrial applications,
+Haskell has pioneered a number of
+programming language features
+such as type classes,
+which enable type-safe operator overloading,
+and monadic input/output (IO).
+It is named after logician Haskell Curry.
+Haskell's main implementation is the Glasgow Haskell Compiler (GHC). 
+
+## Haskell Tooling
+
+* [GHCUp: Haskell installer](https://www.haskell.org/ghcup/)
+* GHC (Glasgow Haskell Compiler)
+    * `runhaskell`
+    * `ghci` (`:quit`, `:load`, `:type`, `:doc`, `:sprint`)
+    * `ghc` (`ghc 01-hello-world.hs -o hello`)
+* Dependency/project management
+    * `cabal`: [Getting Started with Haskell and Cabal](https://cabal.readthedocs.io/en/stable/getting-started.html)
+    * `stack`: [The Haskell Tool Stack](https://docs.haskellstack.org/en/stable/)
+* Documentation:
+    * [Hoogle](https://hoogle.haskell.org/) -- search by type  
