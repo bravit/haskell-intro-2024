@@ -8,4 +8,6 @@ test = putStrLn (if conditions then "OK" else "ERROR")
     conditions =
         swap (5, 10) == (10, 5) &&
         swap ([1, 2, 3], "XXX") == ("XXX", [1, 2, 3]) &&
-        rotateLeft (rotateLeft (rotateLeft (1, 2, 3))) == (1, 2, 3)
+        (swap . swap) (1, 2) == (1, 2) &&
+        rotateLeft (rotateLeft (rotateLeft (1, 2, 3))) == (1, 2, 3) &&
+        (rotateLeft . rotateLeft . rotateLeft) (1, 2, 3) == (1, 2, 3)
