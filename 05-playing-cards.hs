@@ -5,11 +5,11 @@ data Value = Six | Seven | Eight | Nine | Ten | Jack | Queen | King | Ace
 data Card = Card Value Suit
     deriving (Show, Eq, Ord)
 
+isPicture (Card value _) = value >= Jack
+
 isBlack (Card _ Spades) = True
 isBlack (Card _ Clubs) = True
 isBlack _ = False
-
-isPicture (Card value _) = value >= Jack
 
 nextSuit suit
     | suit == maxBound = minBound
