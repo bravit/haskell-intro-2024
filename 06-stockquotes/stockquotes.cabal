@@ -1,0 +1,52 @@
+cabal-version: 2.0
+
+name:           stockquotes
+version:        0.1
+synopsis:       Exerpt from examples to accompany the book "Haskell in Depth"
+description:    This package provides source code examples which accompany the book "Haskell in Depth" by Vitaly Bragilevsky (Manning Publications 2020). 
+category:       Sample Code
+homepage:       https://github.com/bravit/hid-examples#readme
+bug-reports:    https://github.com/bravit/hid-examples/issues
+author:         Vitaly Bragilevsky
+maintainer:     Vitaly Bragilevsky <vit.bragilevsky@gmail.com>
+license:        BSD3
+license-file:   LICENSE
+tested-with:
+    GHC == 8.6.5, GHC == 8.8.3, GHC == 9.4.7, GHC == 9.6.3
+build-type:     Simple
+data-files:
+    data/quotes.csv
+
+source-repository head
+  type: git
+  location: https://github.com/bravit/hid-examples
+
+executable stockquotes
+  hs-source-dirs: src
+  main-is: Main.hs
+  other-modules:
+      Charts
+      HtmlReport
+      Params
+      QuoteData
+      StatReport
+  other-extensions:
+      RecordWildCards
+      OverloadedStrings
+      DeriveGeneric
+      DeriveAnyClass
+  ghc-options: -Wall -Werror -Wcompat -Widentities -Wincomplete-uni-patterns -Wincomplete-record-updates -Wno-unused-top-binds -Wno-orphans
+  build-depends:
+      Chart >=1.8 && <1.10
+    , Chart-diagrams >=1.8 && <1.10
+    , base >=4.12 && <5
+    , blaze-colonnade >=1.1 && <1.3
+    , blaze-html ==0.9.*
+    , bytestring >=0.10 && <0.13
+    , cassava ==0.5.*
+    , colonnade >=1.1 && <1.3
+    , fmt >=0.5 && <0.7
+    , optparse-applicative >=0.14 && <0.19
+    , text >=1.2 && <2.2
+    , time >=1.8 && <1.13
+  default-language: Haskell2010

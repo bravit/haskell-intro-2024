@@ -1,6 +1,6 @@
 func a x = x^2 - a
 func' x = 2 * x
-eps = 0.00000001
+eps = 0.0000000001
 goodEnough a x = abs (func a x) < eps
 improve a x = x - func a x / func' x
 
