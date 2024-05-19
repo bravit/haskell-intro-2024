@@ -8,7 +8,9 @@ quicksort (x:xs) =
 
 fibs :: [Integer]
 fibs = 0 : 1 : zipWith (+) fibs (drop 1 fibs)
-
+--  fibs:          0 : 1 : ??
+--  (drop 1 fibs): 1 : ??
+--  zipWith (+):   ? : ??
 
 test = putStrLn (if conditions then "OK" else "ERROR")
   where
